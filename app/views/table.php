@@ -19,19 +19,19 @@
     <table>
       <thead>
         <tr>
-        <? foreach ($this->csv[0] as $header): ?>
+        <?php foreach ($this->csv[0] as $key=>$header): ?>
           <th><?= $header ?></th>
-        <? endforeach ?>
-        </th>
+        <?php endforeach ?>
+        </tr>
       </thead>
       <tbody>
-        <? for ($x = 1; $x <= count($this->csv) -1; $x++): ?>
+        <?php for ($x = 1; $x <= count($this->csv) -1; $x++): ?>
         <tr>
-          <? foreach ($this->csv[$x] as $column): ?>
+          <?php foreach ($this->csv[$x] as $key=>$column): ?>
           <td><?= $column ?></td>
-          <? endforeach ?>
+          <?php endforeach ?>
         </tr>
-        <? endfor ?>
+        <?php endfor ?>
       </tbody>
     </table>
   </body>
